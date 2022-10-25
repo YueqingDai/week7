@@ -35,8 +35,12 @@ app.post("/message", (req,res) => {
 })
 
 //Where can we see the app running
+/*app.listen(3000, () => {
+  console.log("app is running at localhost:3000");
+})*/
+
 let port = process.env.PORT || 3000;
-server.listen(port, ()=> {
+app.listen(port, ()=> {
   console.log('listening at ', port);
 });
 
