@@ -27,8 +27,8 @@ window.addEventListener("load",() => {
   })
 
   document.getElementById('ins_show').addEventListener('click',()=>{
-    let inputMon =document.getElementById("chooseMonth").value;
-    let nowMon = Month2number(inputMon);
+    let inputMon = document.getElementById("chooseMonth").value;
+    let nowMon = Month2number(inputMon); 
     console.log(inputMon,nowMon);
     let idtext = document.getElementById("id-output").value;
     if(idtext == ""){
@@ -43,7 +43,8 @@ window.addEventListener("load",() => {
         let SameMonth = [];
         let SameTopic = [];
         for(let i=0;i<daty.inspiration.length; i++){
-          if(daty.inspiration[i].month == nowMon){
+          let targetMonth = daty.inspiration[i].month +1;
+          if(targetMonth == nowMon){
             SameMonth.push(daty.inspiration[i]);
           }
         }
